@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link href="/dist/output.css" rel="stylesheet" />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: white;
+      }
+      .attribution a {
+        color: #936ffd;
+        display: inline-block;
+        padding: 10px 16px;
+      }
+    </style>
+  </head>
+  <body class="grid place-items-center min-h-screen bg-slate-900 font-roboto">
+    <main
+      class="max-w-md md:max-w-7xl rounded-2xl md:p-4 bg-white flex flex-col-reverse md:flex-row md:items-center md:justify-between"
+    >
+      <!-- Sign-up form start -->
+      <div class="md:w-96 m-4 md:m-8">
+        <h1 class="text-5xl font-bold pb-6">Stay updated!</h1>
+
+        <p class="pb-4">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+
+        <div class="pb-4">
+          <div class="flex gap-4 mb-2">
+            <img
+              src="./assets/images/icon-list.svg"
+              alt="icon-list"
+              class="w-5 h-5"
+            />
+            <div>Product discovery and building what matters</div>
+          </div>
+
+          <div class="flex gap-4 mb-2">
+            <img
+              src="./assets/images/icon-list.svg"
+              alt="icon-list"
+              class="w-5 h-5"
+            />
+            <div>Measuring to ensure updates are a success</div>
+          </div>
+
+          <div class="flex gap-4">
+            <img
+              src="./assets/images/icon-list.svg"
+              alt="icon-list"
+              class="w-5 h-5"
+            />
+            <div>And much more!</div>
+          </div>
+        </div>
+
+        <!-- form -->
+        <form class="mt-4 md:pr-4" id="email-form">
+          <div class="mb-5">
+            <div
+              class="text-sm font-semibold mb-2 flex justify-between items-center"
+            >
+              <span>Email address</span>
+              <span id="email-error" class="invisible transition">
+                Valid email required
+              </span>
+            </div>
+            <input
+              type="email"
+              name="email"
+              id="email-input"
+              placeholder="email@company.com"
+              required
+              class="rounded-lg border p-3 px-4 w-full hover:border-grey"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="btn-primary hover:bg-gradient_primary hover:shadow-lg hover:shadow-[#ff4e748c] focus:bg-gradient_primary focus:shadow-lg focus:shadow-[#ff4e748c]"
+          >
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+
+        <!-- Sign-up form end -->
+      </div>
+
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="assets/images/illustration-sign-up-desktop.svg"
+        />
+        <img
+          src="./assets/images/illustration-sign-up-mobile.svg"
+          alt="sign up illustration"
+          width="300"
+          height="300"
+          class="w-full md:max-w-xs"
+        />
+      </picture>
+    </main>
+
+    <!-- Success message start -->
+
+    <div
+      class="hidden md:absolute h-screen md:h-auto left-1/2 top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:rounded-2xl bg-white p-4 pb-6 md:p-10 max-w-sm sm:w-[340px] flex-col justify-between"
+      id="success-message"
+    >
+      <div class="flex flex-1 h-full place-items-center">
+        <div>
+          <img
+            src="./assets/images/icon-list.svg"
+            alt="icon-list"
+            width="32"
+            height="32"
+          />
+          <h4 class="text-3xl md:4xl font-bold mt-5 mb-4">
+            Thanks for subscribing!
+          </h4>
+          <p class="text-xs leading-5">
+            A confirmation email has been sent to
+            <span class="font-bold">ash@loremcompany.com.</span>lease open it
+            and click the button inside to confirm your subscription.
+          </p>
+        </div>
+      </div>
+
+      <button
+        class="mt-6 justify-self-end btn-primary hover:bg-gradient_primary hover:shadow-lg hover:shadow-[#ff4e748c] focus:bg-gradient_primary focus:shadow-lg focus:shadow-[#ff4e748c] text-xs"
+      >
+        Dismiss message
+      </button>
+    </div>
+
+    <!-- Success message end -->
+
+    <div class="attribution md:absolute right-0 bottom-0">
+      <span>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor </a
+        >.
+      </span>
+      <span>Coded by <a href="#">Nipan Debnath</a>.</span>
+    </div>
+
+    <script src="./JS/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    :root {
+        --primary-tomato: 4, 100%, 67%;
+        --dark-slate-grey: 234, 29%, 20%;
+        --charcoal-grey: 235, 18%, 26%;
+        --grey: 231, 7%, 60%;
+    }
+
+    .btn-primary {
+        @apply bg-dark_slate_grey text-white font-semibold text-center rounded-lg p-3 px-4 w-full duration-300 transition
+    }
+}
+
+input[type="email"].invalid {
+    background-color: #fff3f0;
+    color: hsl(var(--primary-tomato));
+    border-color: hsl(var(--primary-tomato));
+}
+
+span.invalid {
+    color: hsl(var(--primary-tomato));
+    visibility: visible;
+}
